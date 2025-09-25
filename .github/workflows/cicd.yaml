@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v3    
       - name: build client app
         run: | 
-         docker build -t pooja175shah/webapp-client-githubAction -f client .
+         docker build -t pooja175shah/webapp-client-githubaction -f client .
       - name: push image
         run: |
           docker login -u pooja175shah -p ${{ secrets.DOCKER_TOKEN }} 
