@@ -14,4 +14,4 @@ jobs:
       - name: push image
         run: |
           docker login -u pooja175shah -p ${{ secrets.DOCKER_TOKEN }} 
-          docker push pooja175shah/webapp-client-githubAction
+          docker push pooja175shah/webapp-client-githubaction
