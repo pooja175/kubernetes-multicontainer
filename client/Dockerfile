@@ -3,8 +3,10 @@ WORKDIR /app
 COPY ./client/package*.json ./
 COPY ./client .
 RUN npm install
- 
+
 ENV NODE_OPTIONS=--openssl-legacy-provider
+# Build React app
+RUN chmod +x node_modules/.bin/react-scripts
 RUN npm run build 
 
 FROM nginx:stable-alpine
