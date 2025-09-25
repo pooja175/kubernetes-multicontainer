@@ -21,6 +21,5 @@ jobs:
          docker build -t pooja175shah/webapp-server-githubaction -f server/Dockerfile .
       - name: push image
         run: |
-          docker login -u pooja175shah -p ${{ secrets.DOCKER_TOKEN }} 
-          docker push pooja175shah/webapp-client-githubaction
+          docker push pooja175shah/webapp-server-githubaction
         
